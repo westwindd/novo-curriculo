@@ -322,6 +322,7 @@ function createFace(w, h, ty, rx, ry, rz, tz, trx, edgeLen, color, opacity, cnam
     return face;
 }
 
+
  /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
 navToggle = document.getElementById('nav-toggle'),
@@ -412,25 +413,70 @@ this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
 window.addEventListener('scroll', scrollUp)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.querySelectorAll('section[id]')
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('section[id]');
+    const dodecahedronWrapper = document.querySelector('.dodecahedron-wrapper');
+    const timelineSection = document.querySelector('.timeline'); // Ensure this class exists in your HTML
 
-const scrollActive = () =>{
-const scrollDown = window.scrollY
+    window.addEventListener('scroll', () => {
+        let currentSection = getCurrentSection(sections);
+        moveDodecahedronToSection(currentSection, dodecahedronWrapper);
+        
+        if (currentSection.classList.contains('timeline')) {
+            moveDodecahedronWithinTimeline(timelineSection, dodecahedronWrapper);
+        }
+    });
+});
 
-sections.forEach(current =>{
-  const sectionHeight = current.offsetHeight,
-        sectionTop = current.offsetTop - 58,
-        sectionId = current.getAttribute('id'),
-        sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+function getCurrentSection(sections) {
+    let currentSection = sections[0]; // Default to the first section
+    let scrollPosition = window.scrollY + window.innerHeight / 2;
 
-  if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-      sectionsClass.classList.add('active-link')
-  }else{
-      sectionsClass.classList.remove('active-link')
-  }                                                    
-})
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
+            currentSection = section;
+        }
+    });
+
+    return currentSection;
 }
-window.addEventListener('scroll', scrollActive)
+
+function moveDodecahedronToSection(section, dodecahedronWrapper) {
+    const sectionId = section.getAttribute('id');
+    console.log(`Current section: ${sectionId}`);
+    const offsetTop = section.offsetTop;
+
+    if (sectionId === 'home') {
+        dodecahedronWrapper.style.transform = `translate(-50%, ${offsetTop}px)`;
+    } else if (sectionId === 'about') {
+        dodecahedronWrapper.style.transform = `translate(-790%, ${offsetTop}px)`;
+    } else if (sectionId === 'services') {
+        dodecahedronWrapper.style.transform = `translate(250%, ${offsetTop}px)`;
+    }
+        else if (sectionId === 'timeline') {
+    dodecahedronWrapper.style.transform = `translate(100%, ${offsetTop}px)`;
+    console.log(offsetTop)
+}
+    
+    // The transition is handled smoothly with the CSS transition defined below.
+}
+
+function moveDodecahedronWithinTimeline(timelineSection, dodecahedronWrapper) {
+    const sectionTop = timelineSection.offsetTop;
+    const sectionHeight = timelineSection.offsetHeight;
+    const scrollPosition = window.scrollY;
+    const relativeScroll = scrollPosition - sectionTop;
+    const maxScroll = sectionHeight - window.innerHeight;
+
+    // Calculate the horizontal position based on the scroll within the timeline section
+    const percentageScrolled = Math.min(Math.max(relativeScroll / maxScroll, 0), 1);
+    const horizontalPosition = percentageScrolled * 100 - 50; // Range from -50% to 50%
+
+    dodecahedronWrapper.style.transform = `translate(${horizontalPosition}%, -50%)`;
+}
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 document.addEventListener("DOMContentLoaded", function() {
