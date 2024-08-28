@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="header blur-header" id="header">
+        <nav class="nav container">
+           <a href="#" class="nav__logo">
+              João<span> Paulo</span>
+           </a>
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                 <li class="nav__item">
+                    <a href="#home" class="nav__link">Home</a>
+                 </li>
+                 <li class="nav__item">
+                    <a href="#about" class="nav__link">About</a>
+                 </li>
+                 <li class="nav__item">
+                    <a href="#services" class="nav__link">Services</a>
+                 </li>
+                 <li class="nav__item">
+                    <a href="#projects" class="nav__link">Projects</a>
+                 </li>
+                 <li class="nav__item">
+                    <a href="#contact" class="nav__link">Contact</a>
+                 </li>
+              </ul>
+              <!--Close button-->
+              <div class="nav__close" id="nav-close">
+                 <i class="ri-close-line"></i>
+              </div>
+           </div>
+           <!--Toggle button-->
+           <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line"></i>
+           </div>
+        </nav>
+     </header>
+
+     <!--==================== MAIN ====================-->
+     <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+           <div class="home__container container grid">
+             <div class="home__content">
+               <div class="home__data">
+                 <h3 class="home__subtitle">Hi, <span>I'm</span></h3>
+                 <h1 class="home__title"><span id="hometitle"></span></h1>
+                 <h3 class="home__education">Full-Stack Developer</h3>
+                 <p class="home__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam natus hic modi, id nihil veritatis dolore dolorem labore similique ipsum quam iure saepe?</p>
+                 <a href="#contact" class="button">Let`s Talk</a>
+               </div>
+               <div class="home__social">
+                 <a href="#" class="home__social-link"><i class="ri-github-fill"></i></a>
+                 <a href="#" class="home__social-link"><i class="ri-dribbble-fill"></i></a>
+                 <a href="#" class="home__social-link"><i class="ri-linkedin-box-line"></i></a>
+               </div>
+             </div>
+             <div class="about__image animate-home">
+                <!-- The 3D Dodecahedron model will be rendered here -->
+                <div class="dodecahedron-wrapper">
+                    <div class="dodecahedron"></div>
+                </div>
+            </div>
+           </div>
+         </section>
+         <!--==================== ABOUT ====================-->
+         <section class="about section" id="about">
+           <div class="about__container container grid">
+             <div class="about__data">
+               <h3 class="section__subtitle">My <span>Intro</span></h3>
+               <h2 class="section__title">About Me</h2>
+               <p class="about__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur soluta cumque voluptate assumenda tempore mollitia, ipsa nisi deserunt quibusdam excepturi?</p>
+               <a href="#contact" class="button">Contact Me</a>
+             </div>
+             <div class="about__image animate-about">
+               <svg class="about__blob" viewBox="0 0 550 592" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <mask id="maskBorder" mask-type="alpha">
+                   <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157 171.822C508.583 176.109 513.157 184.032 513.157 192.606V439.894C513.157 448.468 508.583 456.391 501.157 460.678L287 584.322C279.574 588.609 270.426 588.609 263 584.322L48.843 460.678C41.4174 456.391 36.843 448.468 36.843 439.894V192.606C36.843 184.032 41.4174 176.109 48.843 171.822L263 48.1782Z" fill="black"></path>
+                 </mask>
+                 <g mask="url(#maskBorder)">
+                   <rect x="-45" y="-50" width="650" height="780" fill="url(#pattern2)"></rect>
+                   <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157 192.606V439.894C509.157 447.039 505.345 453.641 499.157 457.214L285 580.858C278.812 584.43 271.188 584.43 265 580.858L50.843 457.214C44.655 453.641 40.843 447.039 40.843 439.894V192.606C40.843 185.461 44.655 178.859 50.843 175.286L265 51.6423C271.188 48.0697 278.812 48.0696 285 51.6423Z" stroke="black" stroke-width="10"></path>
+                 </g>
+                 <defs>
+                   <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+                     <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)"></use>
+                   </pattern>
+                   <image class="about__img" id="imageBorder" width="640" height="940" href="./assets/img/resuly.jpg"></image>
+                 </defs>
+               </svg>
+             </div>
+           </div>
+         </section>
+  
+         <!--==================== TIMELINE ====================-->
+         <div class="timeline">
+             <div class="left-content">
+               <div class="card">
+                 <div class="hexagon">
+                       <img src="path/to/your/image1.jpg" alt="Freelancer">
+                 </div>
+                 <p>FREELANCER</p>
+               </div>
+               <div class="card">
+                 <div class="hexagon">
+                   <div class="hexagon-in1">
+                     <div class="hexagon-in2">
+                       <img src="./assets/img/image.png" alt="Fiqon">
+                     </div>
+                   </div>
+                 </div>
+                 <p>FIQON</p>
+               </div>
+               <div class="card">
+                 <div class="hexagon">
+                   <div class="hexagon-in1">
+                     <div class="hexagon-in2">
+                       <img src="path/to/your/image3.jpg" alt="3CPlus">
+                     </div>
+                   </div>
+                 </div>
+                 <p>3CPLUS</p>
+               </div>
+             </div>
+             <div class="right-content">
+                <div class="card">
+                   <div class="hexagon">
+                     <div class="hexagon-in1">
+                       <div class="hexagon-in2">
+                         <img src="path/to/your/image4.jpg" alt="Content 01">
+                       </div>
+                     </div>
+                   </div>
+                   <p>Content 01</p>
+                 </div>
+               <div class="card">
+                 <div class="hexagon">
+                   <div class="hexagon-in1">
+                     <div class="hexagon-in2">
+                       <img src="path/to/your/image5.jpg" alt="Content 02">
+                     </div>
+                   </div>
+                 </div>
+                 <p>Content 02</p>
+               </div>
+               <div class="card">
+                 <div class="hexagon">
+                   <div class="hexagon-in1">
+                     <div class="hexagon-in2">
+                       <img src="path/to/your/image6.jpg" alt="Content 03">
+                     </div>
+                   </div>
+                 </div>
+                 <p>Content 03</p>
+               </div>
+             </div>
+           </div>
+         
+        <!--==================== SKILLS ====================-->
+        <section class="skills section">
+           <div class="skills__container container grid">
+              <div class="skills__data">
+                 <h3 class="section__subtitle">Favorite <span>Skills</span>
+                 </h3>
+                 <p class="skills__description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi dolores sunt nostrum iusto
+                    consequuntur hic, accusamus eos nemo incidunt sit iste nam nobis maiores deserunt.
+                 </p>
+                 <a href="#projects" class="button">See Projects</a>
+              </div>
+              <div class="skills__content">
+                 <ol class="skills__group">
+                    <li class="skills__item">HTML & CSS</li>
+                    <li class="skills__item">BOOTSRAP</li>
+                    <li class="skills__item">JAVASCRIPT</li>
+                 </ol>
+                 <ol class="skills__group" start="4">
+                    <li class="skills__item">JAVA</li>
+                    <li class="skills__item">PYTHON</li>
+                    <li class="skills__item">GITHUB</li>
+                    <li class="skills__item">POSTMAN</li>
+                 </ol>
+              </div>
+           </div>
+        </section>
+  
+        <!--==================== SERVICES ====================-->
+        <section class="services section" id="services">
+           <h3 class="section__subtitle">My <span>Services</span></h3>
+           <h2 class="section__title">What I Do</h2>
+           <div class="services__container container grid">
+              <article class="services__card">
+                 <i class="ri-layout-3-line services__icon"></i>
+                 <h2 class="services__title">Web Developer</h2>
+                 <p class="services__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam mollitia
+                    atque fugit voluptate iusto quidem laboriosam non iste nisi amet!</p>
+              </article>
+              <article class="services__card">
+                 <i class="ri-pantone-line services__icon"></i>
+                 <h2 class="services__title">Python</h2>
+                 <p class="services__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minus
+                    mollitia rem hic accusamus quidem nam nobis, repellendus suscipit sit!</p>
+              </article>
+              <article class="services__card">
+                 <li class="ri-pen-nib-line services__icon"></li>
+                 <h2 class="services__title">Java</h2>
+                 <p class="services__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+                    asperiores veritatis tempore laborum distinctio architecto inventore ab temporibus itaque blanditiis!
+                 </p>
+              </article>
+           </div>
+        </section>
+  
+        <!--==================== PROJECTS ====================-->
+        <section class="projects section" id="projects">
+           <h3 class="section__subtitle">My <span>Jobs</span></h3>
+           <h2 class="section__title">Recent Projects</h2>
+           <div class="projects__container container grid">
+              <article class="projects__card">
+                 <img src="./assets/img/project-img-1.jpg" alt="Project image" class="projects__img">
+                 <div class="projects__modal">
+                    <span class="projects__subtitle">Web</span>
+                    <h2 class="projects__title">Modern Website</h2>
+                    <a href="#" class="projects__button">View Demo <i class="ri-external-link-line"></i></a>
+                 </div>
+              </article>
+              <article class="projects__card">
+                 <img src="./assets/img/project-img-2.jpg" alt="Project image" class="projects__img">
+                 <div class="projects__modal">
+                    <span class="projects__subtitle">Web</span>
+                    <h2 class="projects__title">Modern Website</h2>
+                    <a href="#" class="projects__button">View Demo <i class="ri-external-link-line"></i></a>
+                 </div>
+              </article>
+              <article class="projects__card">
+                 <img src="./assets/img/project-img-3.jpg" alt="Project image" class="projects__img">
+                 <div class="projects__modal">
+                    <span class="projects__subtitle">Web</span>
+                    <h2 class="projects__title">Modern Website</h2>
+                    <a href="#" class="projects__button">View Demo <i class="ri-external-link-line"></i></a>
+                 </div>
+              </article>
+           </div>
+        </section>
+  
+        <!--==================== CONTACT ====================-->
+        <section class="contact section" id="contact">
+           <h3 class="section__subtitle">Get in <span>Touch</span></h3>
+           <h2 class="section__title">Contact Me</h2>
+           <div class="contact__container container grid">
+              <form action="" class="contact__form" id="contact-form">
+                 <div class="contact__group">
+                    <input class="contact__input" type="text" name="user_name" placeholder="Enter your name" required>
+                    <input class="contact__input" type="email" name="user_email" placeholder="Enter your email" required>
+                 </div>
+                 <textarea class="contact__input" name="user_project" id="" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                 <p class="contact__message" id="contact-message">Message</p>
+                 <button type="submit" class="button contact__button">Send Message</button>
+              </form>
+           </div>
+        </section>
+     </main>
+  
+     <!--==================== FOOTER ====================-->
+     <footer class="footer">
+        <div class="footer__container container grid">
+           <div>
+              <h1 class="footer__title">João <span>Paulo</span></h1>
+              <h2 class="footer__education">Full-stack Developer</h2>
+           </div>
+           <div class="footer__social">
+              <a href="" class="footer__social-link"><i class="ri-facebook-circle-line"></i></a>
+              <a href="" class="footer__social-link"><i class="ri-instagram-line"></i></a>
+              <a href="" class="footer__social-link"><i class="ri-twitch-line"></i></a>
+           </div>
+           <span class="footer__copy">&#169; Copyright João Paulo. All rights reserved</span>
+        </div>
+     </footer>
+  
+     <!--========== SCROLL UP ==========-->
+     <a href="#" class="scrollup" id="scroll-up"><i class="ri-arrow-up-line"></i></a>
+
+     <!--=============== EMAIL JS ===============-->
+     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+     
+     <!--=============== SCROLLREVEAL ===============-->
+     <script src="scrollreveal.min.js"></script>
+
+     <!-- Title animation -->
+     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+     <script>
+        var typed = new Typed('#hometitle', {
+            strings: [
+                "João Paulo.",
+                "Integrating Systems with Precision.",
+                "Turning Ideas into Digital Realities.",
+                "Crafting Innovative Solutions.",
+                "Innovating One Line of Code at a Time.",
+                "Transforming Concepts into Code."
+            ],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+
+    <!-- Particles.js container -->
+    <div id="particles-js"></div>
+    
+    <!-- Particles.js and other scripts -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 2,
+                    "density": {
+                        "enable": true,
+                        "value_area": 680.0236182596568
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 12
+                    },
+                    "image": {
+                        "src": "https://www.sprinklr.com/wp-content/themes/sprinklr/assets/images/logo_sprinklr.svg",
+                        "width": 20,
+                        "height": 10
+                    }
+                },
+                "opacity": {
+                    "value": 0.3286994724774322,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 20.34885849793636,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 9.59040959040959,
+                        "size_min": 5.594405594405594,
+                        "sync": true
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6.413648243462092,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "bounce",
+                    "bounce": false,
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 320.6824121731046,
+                        "rotateY": 481.0236182596568
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "window",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 50,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 1,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.1
+                    },
+                    "push": {
+                        "particles_nb": 1
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // Navbar toggle
+        const navbarToggle = document.getElementById('nav-toggle');
+        const navbarMenu = document.getElementById('nav-menu');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('navbar-menu-visible');
+        });
+    </script>
+</body>
+</html>
