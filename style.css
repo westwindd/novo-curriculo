@@ -18,14 +18,15 @@ body, html {
 }
 
 .dodecahedron-wrapper {
-    position: fixed; /* Ensures it stays relative to the viewport */
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    perspective: 1000px;
-    z-index: 10003; /* Ensure it's on top */
-    pointer-events: auto; /* Ensure it can be clicked */
+  position: fixed; /* Stays relative to the viewport */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
+  z-index: 10003; /* Ensure it's on top */
+  pointer-events: auto; /* Ensure it can be clicked */
+  transition: transform 1s ease-in-out; /* Smooth transition */
 }
+
 
 
 .dodecahedron {
